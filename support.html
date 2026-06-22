@@ -5,61 +5,142 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>サポート - 塗装配合計算</title>
   <style>
+    :root {
+      color-scheme: light;
+      --bg: #f5f6f8;
+      --panel: #ffffff;
+      --text: #111318;
+      --muted: #68707c;
+      --accent: #16834b;
+      --line: #e4e7eb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      background: #f5f6f8;
-      color: #111318;
-      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "Noto Sans JP", "Noto Sans SC", sans-serif;
       line-height: 1.8;
     }
 
     main {
-      max-width: 820px;
+      max-width: 900px;
       margin: 0 auto;
       padding: 44px 20px;
     }
 
     article {
-      background: #ffffff;
-      border: 1px solid #e4e7eb;
+      background: var(--panel);
+      border: 1px solid var(--line);
       border-radius: 8px;
       padding: 30px;
     }
 
+    header {
+      margin-bottom: 28px;
+    }
+
     h1 {
-      margin-top: 0;
-      font-size: 32px;
+      margin: 0 0 8px;
+      font-size: clamp(28px, 5vw, 40px);
       line-height: 1.25;
     }
 
+    h2 {
+      margin: 34px 0 12px;
+      padding-top: 26px;
+      border-top: 1px solid var(--line);
+      font-size: 24px;
+      line-height: 1.35;
+    }
+
+    p {
+      margin: 12px 0;
+    }
+
     ul {
-      padding-left: 22px;
+      margin: 10px 0 18px;
+      padding-left: 24px;
     }
 
     a {
-      color: #16834b;
+      color: var(--accent);
       font-weight: 700;
       text-decoration: none;
+    }
+
+    .languages {
+      color: var(--muted);
+    }
+
+    .language-section:first-of-type h2 {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: 0;
     }
   </style>
 </head>
 <body>
   <main>
     <article>
-      <h1>サポート</h1>
-      <p>「塗装配合計算」に関するお問い合わせは、App Store に登録したサポートメールアドレスまでご連絡ください。</p>
+      <header>
+        <h1>サポート</h1>
+        <p class="languages">日本語 / English / 简体中文</p>
+      </header>
 
-      <p>お問い合わせ時には、以下の情報を添えてください。</p>
-      <ul>
-        <li>使用中のアプリバージョン</li>
-        <li>iPhone または iPad の機種</li>
-        <li>iOS バージョン</li>
-        <li>発生している問題の内容</li>
-        <li>再現手順</li>
-      </ul>
+      <section class="language-section" lang="ja">
+        <h2>日本語</h2>
+        <p>「塗装配合計算」に関するお問い合わせは、App Store に登録したサポートメールアドレスまでご連絡ください。</p>
 
-      <p>計算結果は現場作業の補助値です。最終配合は材料メーカーの仕様書と現場条件を確認してください。</p>
-      <p><a href="./index.html">トップへ戻る</a></p>
+        <p>お問い合わせ時には、以下の情報を添えてください。</p>
+        <ul>
+          <li>使用中のアプリバージョン</li>
+          <li>iPhone または iPad の機種</li>
+          <li>iOS バージョン</li>
+          <li>発生している問題の内容</li>
+          <li>再現手順</li>
+        </ul>
+
+        <p>計算結果は現場作業の補助値です。最終配合は材料メーカーの仕様書と現場条件を確認してください。</p>
+      </section>
+
+      <section class="language-section" lang="en">
+        <h2>English</h2>
+        <p>For questions about Paint Mix Calculator, please contact the support email address registered on the App Store.</p>
+
+        <p>When contacting support, please include the following information:</p>
+        <ul>
+          <li>App version you are using</li>
+          <li>iPhone or iPad model</li>
+          <li>iOS version</li>
+          <li>Description of the issue</li>
+          <li>Steps to reproduce the issue</li>
+        </ul>
+
+        <p>Calculation results are intended as job-site reference values. Always confirm the final mix with the material manufacturer's specifications and actual site conditions.</p>
+      </section>
+
+      <section class="language-section" lang="zh-Hans">
+        <h2>简体中文</h2>
+        <p>如需咨询「涂装配比计算」相关问题，请通过 App Store 中登记的技术支持邮箱联系我们。</p>
+
+        <p>联系技术支持时，请附上以下信息：</p>
+        <ul>
+          <li>正在使用的应用版本</li>
+          <li>iPhone 或 iPad 机型</li>
+          <li>iOS 版本</li>
+          <li>遇到的问题内容</li>
+          <li>复现步骤</li>
+        </ul>
+
+        <p>计算结果仅作为现场作业参考值。最终配比请以材料厂家说明书和现场条件为准。</p>
+      </section>
+
+      <p><a href="./index.html">トップへ戻る / Back to top / 返回首页</a></p>
     </article>
   </main>
 </body>
